@@ -1,0 +1,149 @@
+Crie uma landing page moderna e sofisticada para a Allumi Clinic, uma clínica de estética avançada localizada em Suzano-SP.
+
+## IDENTIDADE VISUAL
+
+**Paleta de Cores:**
+- Primárias: Bege claro (#F5F1ED), branco (#FFFFFF), dourado suave (#D4AF37)
+- Secundárias: Preto (#000000) para textos, cinza suave (#8B8B8B) para detalhes
+- Acentos: Gradiente sutil dourado-rosé para elementos de destaque
+
+**Tipografia:**
+- Títulos: Fonte serifada elegante (ex: Playfair Display, Cormorant)
+- Corpo de texto: Fonte sans-serif clean (ex: Montserrat, Inter, Poppins)
+- Estilo: Minimalista, espaçoso, respirável
+
+**Estética Geral:**
+- Design clean e minimalista
+- Abundância de espaço em branco
+- Fotografia profissional com tons neutros e iluminação suave
+- Elementos geométricos sutis (linhas finas, formas circulares)
+
+## ESTRUTURA DA PÁGINA
+
+### 1. HERO SECTION (Primeira Dobra)
+**Elementos:**
+- Logo da Allumi Clinic (monograma "A" em dourado)
+- Headline principal: "Onde sua beleza encontra sua melhor versão"
+- Subheadline: "Estética Facial, Corporal e Capilar em Suzano-SP"
+- CTA primário: Botão "Agendar Consulta" (dourado com hover suave)
+- CTA secundário: "Conheça nossos tratamentos"
+- Imagem de fundo: Foto de ambiente clínico clean ou modelo em tons neutros (com overlay suave)
+
+### 2. SOBRE A CLÍNICA
+**Conteúdo:**
+- Título: "Viva esse momento"
+- Texto focado em: rejuvenescimento natural, resultados eficazes, planejamento personalizado
+- Ícones representando: Profissionalismo | Naturalidade | Tecnologia de ponta
+- Imagem: Profissional em ambiente clínico moderno
+
+### 3. SERVIÇOS (Organizado por categorias)
+
+**FACIAL:**
+- Harmonização Facial
+- Preenchimento Labial
+- Preenchimento Full Face
+- Preenchimento de Olheiras
+- Botox
+- Bioestimulador de Colágeno
+- Rejuvenescimento Facial
+- Limpeza de Pele
+- Peeling Coreano (Lhalla Peel)
+- Peeling Ultrassônico
+
+**TECNOLOGIAS:**
+- Ultrassom Micro e Macro Focado
+- Laser Lavieen
+
+**CORPORAL:**
+- Harmonização Glútea
+- Gordura Localizada
+- Protocolo para Emagrecimento
+- Massagem Drenagem Linfática
+- Massagem Modeladora
+- Massagem Relaxante
+
+**CAPILAR:**
+- Tricologia (Tratamento para Alopecia)
+
+**PROTOCOLOS ESPECIAIS:**
+- Protocolo para Melhora de Qualidade de Pele
+- Protocolo para Emagrecimento
+
+**Design dos cards de serviço:**
+- Cards com hover suave
+- Ícone minimalista para cada categoria
+- Descrição breve (1-2 linhas)
+- Link "Saiba mais" discreto
+
+### 4. DIFERENCIAIS
+**Título:** "Por que escolher a Allumi Clinic?"
+
+**Blocos:**
+- 🎯 Resultados Naturais: "Valorizamos sua beleza única com técnicas que respeitam sua harmonia natural"
+- 🔬 Tecnologia Avançada: "Equipamentos de última geração para tratamentos seguros e eficazes"
+- 👩‍⚕️ Equipe Especializada: "Profissionais qualificados e em constante atualização"
+- 📋 Planejamento Personalizado: "Cada tratamento é desenvolvido especialmente para você"
+
+### 5. GALERIA/ANTES & DEPOIS
+- Seção com slider de resultados (se disponível)
+- Ou fotos do ambiente da clínica
+- Manter estética clean e profissional
+
+### 6. DEPOIMENTOS
+- Cards com avaliações de clientes (se disponível)
+- Design minimalista com aspas decorativas
+- Sistema de carrossel suave
+
+### 7. LOCALIZAÇÃO & CONTATO
+**Informações:**
+- Endereço: Suzano - SP
+- Mapa do Google Maps integrado
+- Ícones de contato: WhatsApp, Instagram, Telefone
+- Horário de funcionamento
+
+### 8. CTA FINAL
+- Fundo com gradiente suave
+- Título: "Pronta para sua melhor versão?"
+- Botão grande: "Agendar Avaliação Gratuita"
+- Formulário simples (Nome, WhatsApp, Procedimento de Interesse)
+
+### 9. FOOTER
+- Logo pequeno
+- Links rápidos (Serviços, Sobre, Contato)
+- Redes sociais
+- Direitos reservados
+
+## FUNCIONALIDADES TÉCNICAS
+
+- Design responsivo (mobile-first)
+- Botão WhatsApp flutuante
+- Animações suaves ao scroll (fade-in, slide-up)
+- Formulário de contato integrado
+- Link para Linktree/bio: linktree/Allumiclinic
+- Ícone do Instagram clicável: @allumiclinic
+- Otimização SEO para "clínica de estética Suzano"
+- Velocidade de carregamento otimizada
+
+## TOM DE VOZ
+
+- Acolhedor e confiante
+- Profissional sem ser frio
+- Aspiracional mas acessível
+- Foco em "você merece" e "sua melhor versão"
+- Evitar jargões excessivamente técnicos
+
+## CALL-TO-ACTIONS ESTRATÉGICOS
+
+- Primário: "Agendar Consulta"
+- Secundários: "Falar no WhatsApp", "Conhecer Tratamentos", "Seguir no Instagram"
+
+## DIFERENCIAIS DE COPY
+
+- Usar verbos no imperativo positivo (Descubra, Realize, Transforme)
+- Incluir frases como:
+  - "Beleza que respeita sua essência"
+  - "Tecnologia a favor da sua naturalidade"
+  - "Onde ciência e estética se encontram"
+  - "Sua confiança começa aqui"
+
+Crie o código HTML/CSS/JavaScript completo, responsivo e pronto para deploy, seguindo as melhores práticas de UX/UI e acessibilidade.
