@@ -417,6 +417,7 @@ export default function Home() {
         id: "facial",
         label: "Facial",
         icon: <Wand2 className="size-4" strokeWidth={2.2} />,
+        image: "/images/service-facial.jpg",
         items: [
           { title: "Harmonização Facial", desc: "Equilíbrio e naturalidade em cada ângulo." },
           { title: "Preenchimento Labial", desc: "Volume e contorno com leveza e harmonia." },
@@ -434,6 +435,7 @@ export default function Home() {
         id: "tecnologias",
         label: "Tecnologias",
         icon: <Sparkles className="size-4" strokeWidth={2.2} />,
+        image: "/images/service-tech.jpg",
         items: [
           { title: "Ultrassom Micro e Macro Focado", desc: "Definição e firmeza com precisão." },
           { title: "Laser Lavieen", desc: "Textura, poros e glow com tecnologia." },
@@ -443,6 +445,7 @@ export default function Home() {
         id: "corporal",
         label: "Corporal",
         icon: <Wand2 className="size-4" strokeWidth={2.2} />,
+        image: "/images/service-body.jpg",
         items: [
           { title: "Harmonização Glútea", desc: "Proporção e definição com segurança." },
           { title: "Gordura Localizada", desc: "Protocolos direcionados por avaliação." },
@@ -456,12 +459,14 @@ export default function Home() {
         id: "capilar",
         label: "Capilar",
         icon: <Sparkles className="size-4" strokeWidth={2.2} />,
+        image: "/images/service-hair.jpg",
         items: [{ title: "Tricologia (Alopecia)", desc: "Diagnóstico e tratamento com ciência." }],
       },
       {
         id: "protocolos",
         label: "Protocolos",
         icon: <Sparkles className="size-4" strokeWidth={2.2} />,
+        image: "/images/service-protocol.jpg",
         items: [
           { title: "Melhora de Qualidade de Pele", desc: "Viço, uniformidade e textura." },
           { title: "Protocolo para Emagrecimento", desc: "Estratégia completa e sustentável." },
@@ -847,21 +852,23 @@ export default function Home() {
               </div>
 
               <div className="grid gap-4">
-                <div className="flex items-end justify-between gap-4">
-                  <div>
-                    <div className="lux-kicker" data-testid="text-active-cat-kicker">Selecionado</div>
-                    <div className="mt-3 font-serif text-2xl" data-testid="text-active-cat-title">
-                      {active.label}
+                <div className="lux-card relative aspect-[21/9] overflow-hidden sm:aspect-[32/10]" data-testid="card-category-hero">
+                  <div className="absolute inset-0 lux-noise" />
+                  <img
+                    src={(active as any).image}
+                    alt={active.label}
+                    className="absolute inset-0 h-full w-full object-cover opacity-80"
+                    data-testid="img-category-hero"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent" />
+                  <div className="relative flex h-full items-center p-6 sm:p-10">
+                    <div>
+                      <div className="lux-kicker" data-testid="text-active-cat-kicker">Selecionado</div>
+                      <div className="mt-2 font-serif text-3xl sm:text-4xl" data-testid="text-active-cat-title">
+                        {active.label}
+                      </div>
                     </div>
                   </div>
-                  <a
-                    href="#contato"
-                    className="hidden sm:inline-flex items-center gap-2 rounded-full border bg-white/60 px-4 py-2 text-sm text-muted-foreground backdrop-blur transition hover:bg-white hover:text-foreground"
-                    data-testid="link-saiba-mais"
-                  >
-                    Saiba mais
-                    <ArrowRight className="size-4" />
-                  </a>
                 </div>
 
                 <div className="grid gap-4 sm:grid-cols-2">
