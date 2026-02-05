@@ -82,17 +82,10 @@ function LogoMark({ className }: { className?: string }) {
       aria-label="Allumi Clinic"
     >
       <div
-        className="relative grid size-10 place-items-center rounded-full border bg-white/55 backdrop-blur-sm"
+        className="relative grid size-10 place-items-center overflow-hidden rounded-full border bg-white/55 backdrop-blur-sm"
         data-testid="brand-logomark"
       >
-        <div className="absolute inset-0 rounded-full lux-gradient-gold opacity-20" />
-        <span
-          className="relative font-serif text-[18px] leading-none text-foreground"
-          style={{ letterSpacing: "0.02em" }}
-          data-testid="text-monogram"
-        >
-          A
-        </span>
+        <img src="/logo-allumi.png" alt="Allumi Logo" className="h-full w-full object-cover" />
       </div>
       <div className="leading-tight">
         <div
