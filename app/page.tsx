@@ -186,16 +186,49 @@ function GallerySlider() {
   const slides = useMemo(
     () => [
       {
-        title: "Ambiente clean e acolhedor",
-        caption: "Iluminação suave, tons neutros e conforto em cada detalhe.",
+        image: "/images/sala-estetica-1.jpg",
+        title: "Sala de Estética",
+        caption: "Nossa sala foi cuidadosamente pensada para proporcionar uma experiência única de relaxamento. O teto com céu estrelado e a iluminação suave criam uma atmosfera acolhedora, tranquila e sofisticada, perfeita para desacelerar, aliviar a ansiedade e aproveitar cada momento de cuidado. Aqui, você não vem apenas para um procedimento — você vem para viver um momento só seu. ✨",
       },
       {
-        title: "Tecnologia a favor da naturalidade",
-        caption: "Equipamentos modernos com foco em segurança e resultados.",
+        image: "/images/sala-estetica-2.jpg",
+        title: "Sala de Estética",
+        caption: "Nossa sala foi cuidadosamente pensada para proporcionar uma experiência única de relaxamento. O teto com céu estrelado e a iluminação suave criam uma atmosfera acolhedora, tranquila e sofisticada, perfeita para desacelerar, aliviar a ansiedade e aproveitar cada momento de cuidado. Aqui, você não vem apenas para um procedimento — você vem para viver um momento só seu. ✨",
       },
       {
-        title: "Cuidado personalizado",
-        caption: "Um plano pensado para você — do início ao pós.",
+        image: "/images/sala-estetica-3.jpg",
+        title: "Sala de Estética",
+        caption: "Nossa sala foi cuidadosamente pensada para proporcionar uma experiência única de relaxamento. O teto com céu estrelado e a iluminação suave criam uma atmosfera acolhedora, tranquila e sofisticada, perfeita para desacelerar, aliviar a ansiedade e aproveitar cada momento de cuidado. Aqui, você não vem apenas para um procedimento — você vem para viver um momento só seu. ✨",
+      },
+      {
+        image: "/images/espaco-dra-carol-1.jpg",
+        title: "Espaço da Dra. Carol",
+        caption: "O Espaço da Dra. Carol foi planejado para refletir sofisticação, precisão e alto padrão. Com design contemporâneo e iluminação estratégica, o ambiente transmite segurança e confiança, onde cada atendimento é conduzido com excelência técnica e foco em resultados naturais e elegantes.",
+      },
+      {
+        image: "/images/espaco-dra-carol-2.jpg",
+        title: "Espaço da Dra. Carol",
+        caption: "O Espaço da Dra. Carol foi planejado para refletir sofisticação, precisão e alto padrão. Com design contemporâneo e iluminação estratégica, o ambiente transmite segurança e confiança, onde cada atendimento é conduzido com excelência técnica e foco em resultados naturais e elegantes.",
+      },
+      {
+        image: "/images/espaco-dra-carol-3.jpg",
+        title: "Espaço da Dra. Carol",
+        caption: "O Espaço da Dra. Carol foi planejado para refletir sofisticação, precisão e alto padrão. Com design contemporâneo e iluminação estratégica, o ambiente transmite segurança e confiança, onde cada atendimento é conduzido com excelência técnica e foco em resultados naturais e elegantes.",
+      },
+      {
+        image: "/images/recepcao-1.jpg",
+        title: "Recepção",
+        caption: "Nossa recepção foi projetada para traduzir o padrão de excelência da Allumi Clinic. Com arquitetura contemporânea, iluminação suave e design minimalista, o ambiente transmite elegância, exclusividade e acolhimento desde o primeiro momento. Aqui, a experiência começa antes mesmo do atendimento.",
+      },
+      {
+        image: "/images/recepcao-2.jpg",
+        title: "Recepção",
+        caption: "Nossa recepção foi projetada para traduzir o padrão de excelência da Allumi Clinic. Com arquitetura contemporânea, iluminação suave e design minimalista, o ambiente transmite elegância, exclusividade e acolhimento desde o primeiro momento. Aqui, a experiência começa antes mesmo do atendimento.",
+      },
+      {
+        image: "/images/recepcao-3.jpg",
+        title: "Recepção",
+        caption: "Nossa recepção foi projetada para traduzir o padrão de excelência da Allumi Clinic. Com arquitetura contemporânea, iluminação suave e design minimalista, o ambiente transmite elegância, exclusividade e acolhimento desde o primeiro momento. Aqui, a experiência começa antes mesmo do atendimento.",
       },
     ],
     [],
@@ -212,8 +245,17 @@ function GallerySlider() {
           data-testid="gallery-viewport"
         >
           <div className="absolute inset-0 lux-grid opacity-[0.35]" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/0 to-black/10" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/40 to-black/80" />
           <div className="absolute inset-0 lux-noise" />
+          
+          {/* Imagem de fundo */}
+          {slides[index]?.image && (
+            <img
+              src={slides[index].image}
+              alt={slides[index].title}
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+          )}
 
           <div className="absolute inset-0 flex items-end">
             <div className="p-6 sm:p-8">
@@ -224,11 +266,11 @@ function GallerySlider() {
                 <Sparkles className="size-3" />
                 Galeria
               </div>
-              <div className="mt-4 max-w-xl">
-                <div className="font-serif text-2xl leading-tight" data-testid="text-gallery-title">
+              <div className="mt-4 max-w-2xl">
+                <div className="font-serif text-2xl leading-tight text-white drop-shadow-lg" data-testid="text-gallery-title">
                   {slides[index]?.title}
                 </div>
-                <div className="mt-2 text-sm text-muted-foreground" data-testid="text-gallery-caption">
+                <div className="mt-3 text-sm leading-relaxed text-white/95 drop-shadow-md" data-testid="text-gallery-caption">
                   {slides[index]?.caption}
                 </div>
               </div>
@@ -494,7 +536,12 @@ export default function Home() {
         label: "Capilar",
         icon: <Sparkles className="size-4" strokeWidth={2.2} />,
         image: "/images/service-hair.jpg",
-        items: [{ title: "Tricologia (Alopecia)", desc: "Diagnóstico e tratamento com ciência." }],
+        items: [
+          { title: "Tricologia (Alopecia)", desc: "Diagnóstico e tratamento com ciência." },
+          { title: "Calvice (Alopecia Androgenética)", desc: "Tratamento especializado para calvície masculina e feminina." },
+          { title: "Eflúvio Telógeno (Queda Capilar Repentina)", desc: "Diagnóstico e tratamento para queda capilar súbita." },
+          { title: "Estímulo do Crescimento Capilar", desc: "Tratamento para crescimento capilar e diminuição de queda." },
+        ],
       },
       {
         id: "protocolos",
@@ -504,6 +551,8 @@ export default function Home() {
         items: [
           { title: "Melhora de Qualidade de Pele", desc: "Viço, uniformidade e textura." },
           { title: "Protocolo para Emagrecimento", desc: "Estratégia completa e sustentável." },
+          { title: "Rejuvenescimento Facial", desc: "Protocolo completo para renovação e vitalidade da pele." },
+          { title: "Tratamento de Acne", desc: "Protocolo especializado para controle e tratamento de acne." },
         ],
       },
     ],
@@ -995,14 +1044,14 @@ export default function Home() {
                 <FadeIn>
                   <SectionHeader
                     kicker="Galeria"
-                    title="Um espaço pensado para o seu conforto"
-                    description="Se você ainda não tem fotos de antes e depois, sem problemas: esta seção pode mostrar o ambiente e a experiência Allumi."
+                    title="Conheça nossos ambientes"
+                    description="Espaços cuidadosamente projetados para proporcionar conforto, tranquilidade e uma experiência única de cuidado e bem-estar."
                   />
                   <div className="mt-8 grid gap-4">
                     {[
-                      "Fotografia com tons neutros e luz suave",
-                      "Elementos geométricos discretos e elegantes",
-                      "Sensação de leveza, limpeza e confiança",
+                      "Teto com céu estrelado para uma experiência única",
+                      "Iluminação suave que cria atmosfera acolhedora e tranquila",
+                      "Ambiente sofisticado perfeito para relaxamento e cuidado",
                     ].map((t, idx) => (
                       <div key={t} className="flex items-start gap-3" data-testid={`row-gallery-point-${idx}`}>
                         <span className="mt-0.5 grid size-6 place-items-center rounded-full lux-gradient-gold text-black" aria-hidden>
