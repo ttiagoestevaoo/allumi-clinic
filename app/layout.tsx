@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://allumiclinic.com.br/"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://allumiclinic.com.br"),
   alternates: {
     canonical: "/",
   },
@@ -67,6 +67,7 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         alt: "Allumi Clinic — Clínica de Estética em Suzano-SP",
+        type: "image/jpeg",
       },
     ],
   },
