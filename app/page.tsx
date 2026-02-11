@@ -183,6 +183,8 @@ function FloatingWhatsApp() {
 }
 
 function GallerySlider() {
+  const [imageErrors, setImageErrors] = useState<Set<number>>(new Set());
+
   const slides = useMemo(
     () => [
       {
@@ -237,6 +239,10 @@ function GallerySlider() {
   const [index, setIndex] = useState(0);
   const go = (dir: -1 | 1) => setIndex((i) => (i + dir + slides.length) % slides.length);
 
+  const handleImageError = (slideIndex: number) => {
+    setImageErrors((prev) => new Set(prev).add(slideIndex));
+  };
+
   return (
     <div className="lux-card overflow-hidden">
       <div className="relative">
@@ -244,20 +250,42 @@ function GallerySlider() {
           className="relative aspect-[16/10] sm:aspect-[16/8] overflow-hidden"
           data-testid="gallery-viewport"
         >
-          <div className="absolute inset-0 lux-grid opacity-[0.35]" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/40 to-black/80" />
-          <div className="absolute inset-0 lux-noise" />
-          
-          {/* Imagem de fundo */}
-          {slides[index]?.image && (
+          {/* Imagem de fundo - primeiro layer */}
+          {slides[index]?.image && !imageErrors.has(index) ? (
             <img
               src={slides[index].image}
-              alt={slides[index].title}
-              className="absolute inset-0 h-full w-full object-cover"
+              alt={slides[index].title || "Galeria Allumi Clinic"}
+              className="absolute inset-0 z-[1] h-full w-full object-cover"
+              onError={(e) => {
+                console.error(`Erro ao carregar imagem: ${slides[index]?.image}`);
+                const target = e.target as HTMLImageElement;
+                target.style.display = "none";
+                handleImageError(index);
+              }}
+              onLoad={() => {
+                console.log(`Imagem carregada com sucesso: ${slides[index]?.image}`);
+              }}
+              loading={index === 0 ? "eager" : "lazy"}
             />
+          ) : null}
+          
+          {/* Fallback quando imagem não existe ou erro */}
+          {(!slides[index]?.image || imageErrors.has(index)) && (
+            <div className="absolute inset-0 z-[1] bg-gradient-to-br from-primary/20 via-primary/10 to-background flex items-center justify-center">
+              <div className="text-center p-8">
+                <Sparkles className="mx-auto size-12 text-primary/40 mb-4" />
+                <p className="text-sm text-muted-foreground">Imagem em breve</p>
+              </div>
+            </div>
           )}
 
-          <div className="absolute inset-0 flex items-end">
+          {/* Overlays - segundo layer */}
+          <div className="absolute inset-0 z-[2] lux-grid opacity-[0.35]" />
+          <div className="absolute inset-0 z-[2] bg-gradient-to-b from-black/0 via-black/40 to-black/80" />
+          <div className="absolute inset-0 z-[2] lux-noise" />
+
+          {/* Conteúdo - terceiro layer */}
+          <div className="absolute inset-0 z-[3] flex items-end">
             <div className="p-6 sm:p-8">
               <div
                 className="inline-flex items-center gap-2 rounded-full border bg-white/70 px-3 py-1 text-xs text-muted-foreground backdrop-blur"
@@ -266,11 +294,11 @@ function GallerySlider() {
                 <Sparkles className="size-3" />
                 Galeria
               </div>
-              <div className="mt-4 max-w-2xl">
-                <div className="font-serif text-2xl leading-tight text-white drop-shadow-lg" data-testid="text-gallery-title">
+              <div className="mt-4 max-w-lg">
+                <div className="font-serif text-lg sm:text-xl leading-tight text-white drop-shadow-lg" data-testid="text-gallery-title">
                   {slides[index]?.title}
                 </div>
-                <div className="mt-3 text-sm leading-relaxed text-white/95 drop-shadow-md" data-testid="text-gallery-caption">
+                <div className="mt-2 text-xs leading-relaxed text-white/90 drop-shadow-md line-clamp-2" data-testid="text-gallery-caption">
                   {slides[index]?.caption}
                 </div>
               </div>
