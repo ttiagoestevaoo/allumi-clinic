@@ -188,36 +188,6 @@ function GallerySlider() {
   const slides = useMemo(
     () => [
       {
-        image: "/images/sala-estetica-1.jpg",
-        title: "Sala de Estética",
-        caption: "Teto com céu estrelado e iluminação suave criam uma atmosfera acolhedora e sofisticada, perfeita para relaxamento e cuidado personalizado.",
-      },
-      {
-        image: "/images/sala-estetica-2.jpg",
-        title: "Sala de Estética",
-        caption: "Teto com céu estrelado e iluminação suave criam uma atmosfera acolhedora e sofisticada, perfeita para relaxamento e cuidado personalizado.",
-      },
-      {
-        image: "/images/sala-estetica-3.jpg",
-        title: "Sala de Estética",
-        caption: "Teto com céu estrelado e iluminação suave criam uma atmosfera acolhedora e sofisticada, perfeita para relaxamento e cuidado personalizado.",
-      },
-      {
-        image: "/images/espaco-dra-carol-1.jpg",
-        title: "Espaço da Dra. Carol",
-        caption: "Design contemporâneo e iluminação estratégica transmitem segurança e confiança, com excelência técnica e foco em resultados naturais.",
-      },
-      {
-        image: "/images/espaco-dra-carol-2.jpg",
-        title: "Espaço da Dra. Carol",
-        caption: "Design contemporâneo e iluminação estratégica transmitem segurança e confiança, com excelência técnica e foco em resultados naturais.",
-      },
-      {
-        image: "/images/espaco-dra-carol-3.jpg",
-        title: "Espaço da Dra. Carol",
-        caption: "Design contemporâneo e iluminação estratégica transmitem segurança e confiança, com excelência técnica e foco em resultados naturais.",
-      },
-      {
         image: "/images/recepcao-1.jpg",
         title: "Recepção",
         caption: "Arquitetura contemporânea, iluminação suave e design minimalista transmitem elegância e acolhimento desde o primeiro momento.",
@@ -231,6 +201,36 @@ function GallerySlider() {
         image: "/images/recepcao-3.jpg",
         title: "Recepção",
         caption: "Arquitetura contemporânea, iluminação suave e design minimalista transmitem elegância e acolhimento desde o primeiro momento.",
+      },
+      {
+        image: "/images/espaco-dra-carol-1.jpg",
+        title: "Consultório Dra. Carolline",
+        caption: "Design contemporâneo e iluminação estratégica transmitem segurança e confiança, com excelência técnica e foco em resultados naturais.",
+      },
+      {
+        image: "/images/espaco-dra-carol-2.jpg",
+        title: "Consultório Dra. Carolline",
+        caption: "Design contemporâneo e iluminação estratégica transmitem segurança e confiança, com excelência técnica e foco em resultados naturais.",
+      },
+      {
+        image: "/images/espaco-dra-carol-3.jpg",
+        title: "Consultório Dra. Carolline",
+        caption: "Design contemporâneo e iluminação estratégica transmitem segurança e confiança, com excelência técnica e foco em resultados naturais.",
+      },
+      {
+        image: "/images/sala-estetica-1.jpg",
+        title: "Sala de Estética",
+        caption: "Teto com céu estrelado e iluminação suave criam uma atmosfera acolhedora e sofisticada, perfeita para relaxamento e cuidado personalizado.",
+      },
+      {
+        image: "/images/sala-estetica-2.jpg",
+        title: "Sala de Estética",
+        caption: "Teto com céu estrelado e iluminação suave criam uma atmosfera acolhedora e sofisticada, perfeita para relaxamento e cuidado personalizado.",
+      },
+      {
+        image: "/images/sala-estetica-3.jpg",
+        title: "Sala de Estética",
+        caption: "Teto com céu estrelado e iluminação suave criam uma atmosfera acolhedora e sofisticada, perfeita para relaxamento e cuidado personalizado.",
       },
     ],
     [],
@@ -247,7 +247,7 @@ function GallerySlider() {
     <div className="lux-card overflow-hidden">
       <div className="relative">
         <div
-          className="relative aspect-[16/10] sm:aspect-[16/8] overflow-hidden"
+          className="relative aspect-[4/3] sm:aspect-[16/9] overflow-hidden"
           data-testid="gallery-viewport"
         >
           {/* Imagem de fundo - primeiro layer */}
@@ -255,7 +255,7 @@ function GallerySlider() {
             <img
               src={slides[index].image}
               alt={slides[index].title || "Galeria Allumi Clinic"}
-              className="absolute inset-0 z-[1] h-full w-full object-cover"
+              className="absolute inset-0 z-[1] h-full w-full object-contain sm:object-cover"
               onError={(e) => {
                 console.error(`Erro ao carregar imagem: ${slides[index]?.image}`);
                 const target = e.target as HTMLImageElement;
@@ -286,19 +286,19 @@ function GallerySlider() {
 
           {/* Conteúdo - terceiro layer */}
           <div className="absolute inset-0 z-[3] flex items-end">
-            <div className="p-6 sm:p-8">
+            <div className="w-full p-4 sm:p-6 lg:p-8">
               <div
-                className="inline-flex items-center gap-2 rounded-full border bg-white/70 px-3 py-1 text-xs text-muted-foreground backdrop-blur"
+                className="inline-flex items-center gap-2 rounded-full border bg-white/70 px-2.5 py-1 text-[10px] sm:text-xs text-muted-foreground backdrop-blur"
                 data-testid="badge-gallery"
               >
-                <Sparkles className="size-3" />
+                <Sparkles className="size-2.5 sm:size-3" />
                 Galeria
               </div>
-              <div className="mt-4 max-w-lg">
-                <div className="font-serif text-lg sm:text-xl leading-tight text-white drop-shadow-lg" data-testid="text-gallery-title">
+              <div className="mt-3 sm:mt-4 max-w-lg">
+                <div className="font-serif text-base sm:text-lg lg:text-xl leading-tight text-white drop-shadow-lg" data-testid="text-gallery-title">
                   {slides[index]?.title}
                 </div>
-                <div className="mt-2 text-xs leading-relaxed text-white/90 drop-shadow-md line-clamp-2" data-testid="text-gallery-caption">
+                <div className="mt-1.5 sm:mt-2 text-[11px] sm:text-xs leading-relaxed text-white/90 drop-shadow-md line-clamp-2" data-testid="text-gallery-caption">
                   {slides[index]?.caption}
                 </div>
               </div>
@@ -306,40 +306,40 @@ function GallerySlider() {
           </div>
         </div>
 
-        <div className="absolute right-4 top-4 flex items-center gap-2">
+        <div className="absolute right-2 top-2 sm:right-4 sm:top-4 flex items-center gap-1.5 sm:gap-2 z-[4]">
           <button
             type="button"
             onClick={() => go(-1)}
-            className="grid size-10 place-items-center rounded-full border bg-white/75 backdrop-blur transition hover:bg-white"
+            className="grid size-8 sm:size-10 place-items-center rounded-full border bg-white/75 backdrop-blur transition hover:bg-white"
             data-testid="button-gallery-prev"
             aria-label="Anterior"
           >
-            <ChevronLeft className="size-4" />
+            <ChevronLeft className="size-3.5 sm:size-4" />
           </button>
           <button
             type="button"
             onClick={() => go(1)}
-            className="grid size-10 place-items-center rounded-full border bg-white/75 backdrop-blur transition hover:bg-white"
+            className="grid size-8 sm:size-10 place-items-center rounded-full border bg-white/75 backdrop-blur transition hover:bg-white"
             data-testid="button-gallery-next"
             aria-label="Próximo"
           >
-            <ChevronRight className="size-4" />
+            <ChevronRight className="size-3.5 sm:size-4" />
           </button>
         </div>
       </div>
 
-      <div className="flex items-center justify-between gap-4 border-t px-6 py-4 text-sm">
-        <div className="text-muted-foreground" data-testid="text-gallery-indicator">
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 border-t px-4 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm">
+        <div className="text-muted-foreground text-center sm:text-left" data-testid="text-gallery-indicator">
           {index + 1} / {slides.length}
         </div>
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-1 flex-wrap justify-center">
           {slides.map((_, i) => (
             <button
               key={i}
               type="button"
               onClick={() => setIndex(i)}
               className={cx(
-                "h-2 w-8 rounded-full border transition",
+                "h-1.5 sm:h-2 w-6 sm:w-8 rounded-full border transition",
                 i === index ? "lux-gradient-gold" : "bg-white/70",
               )}
               data-testid={`button-gallery-dot-${i}`}
