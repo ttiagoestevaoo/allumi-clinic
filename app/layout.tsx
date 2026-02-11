@@ -132,7 +132,8 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${montserrat.variable} ${playfair.variable}`}>
       <head>
-        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="icon" type="image/png" href="/logo-allumi.png" />
+        <link rel="apple-touch-icon" href="/logo-allumi.png" />
       </head>
       <body>
         <Providers>
