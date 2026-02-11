@@ -190,47 +190,47 @@ function GallerySlider() {
       {
         image: "/images/sala-estetica-1.jpg",
         title: "Sala de Estética",
-        caption: "Nossa sala foi cuidadosamente pensada para proporcionar uma experiência única de relaxamento. O teto com céu estrelado e a iluminação suave criam uma atmosfera acolhedora, tranquila e sofisticada, perfeita para desacelerar, aliviar a ansiedade e aproveitar cada momento de cuidado. Aqui, você não vem apenas para um procedimento — você vem para viver um momento só seu. ✨",
+        caption: "Teto com céu estrelado e iluminação suave criam uma atmosfera acolhedora e sofisticada, perfeita para relaxamento e cuidado personalizado.",
       },
       {
         image: "/images/sala-estetica-2.jpg",
         title: "Sala de Estética",
-        caption: "Nossa sala foi cuidadosamente pensada para proporcionar uma experiência única de relaxamento. O teto com céu estrelado e a iluminação suave criam uma atmosfera acolhedora, tranquila e sofisticada, perfeita para desacelerar, aliviar a ansiedade e aproveitar cada momento de cuidado. Aqui, você não vem apenas para um procedimento — você vem para viver um momento só seu. ✨",
+        caption: "Teto com céu estrelado e iluminação suave criam uma atmosfera acolhedora e sofisticada, perfeita para relaxamento e cuidado personalizado.",
       },
       {
         image: "/images/sala-estetica-3.jpg",
         title: "Sala de Estética",
-        caption: "Nossa sala foi cuidadosamente pensada para proporcionar uma experiência única de relaxamento. O teto com céu estrelado e a iluminação suave criam uma atmosfera acolhedora, tranquila e sofisticada, perfeita para desacelerar, aliviar a ansiedade e aproveitar cada momento de cuidado. Aqui, você não vem apenas para um procedimento — você vem para viver um momento só seu. ✨",
+        caption: "Teto com céu estrelado e iluminação suave criam uma atmosfera acolhedora e sofisticada, perfeita para relaxamento e cuidado personalizado.",
       },
       {
         image: "/images/espaco-dra-carol-1.jpg",
         title: "Espaço da Dra. Carol",
-        caption: "O Espaço da Dra. Carol foi planejado para refletir sofisticação, precisão e alto padrão. Com design contemporâneo e iluminação estratégica, o ambiente transmite segurança e confiança, onde cada atendimento é conduzido com excelência técnica e foco em resultados naturais e elegantes.",
+        caption: "Design contemporâneo e iluminação estratégica transmitem segurança e confiança, com excelência técnica e foco em resultados naturais.",
       },
       {
         image: "/images/espaco-dra-carol-2.jpg",
         title: "Espaço da Dra. Carol",
-        caption: "O Espaço da Dra. Carol foi planejado para refletir sofisticação, precisão e alto padrão. Com design contemporâneo e iluminação estratégica, o ambiente transmite segurança e confiança, onde cada atendimento é conduzido com excelência técnica e foco em resultados naturais e elegantes.",
+        caption: "Design contemporâneo e iluminação estratégica transmitem segurança e confiança, com excelência técnica e foco em resultados naturais.",
       },
       {
         image: "/images/espaco-dra-carol-3.jpg",
         title: "Espaço da Dra. Carol",
-        caption: "O Espaço da Dra. Carol foi planejado para refletir sofisticação, precisão e alto padrão. Com design contemporâneo e iluminação estratégica, o ambiente transmite segurança e confiança, onde cada atendimento é conduzido com excelência técnica e foco em resultados naturais e elegantes.",
+        caption: "Design contemporâneo e iluminação estratégica transmitem segurança e confiança, com excelência técnica e foco em resultados naturais.",
       },
       {
         image: "/images/recepcao-1.jpg",
         title: "Recepção",
-        caption: "Nossa recepção foi projetada para traduzir o padrão de excelência da Allumi Clinic. Com arquitetura contemporânea, iluminação suave e design minimalista, o ambiente transmite elegância, exclusividade e acolhimento desde o primeiro momento. Aqui, a experiência começa antes mesmo do atendimento.",
+        caption: "Arquitetura contemporânea, iluminação suave e design minimalista transmitem elegância e acolhimento desde o primeiro momento.",
       },
       {
         image: "/images/recepcao-2.jpg",
         title: "Recepção",
-        caption: "Nossa recepção foi projetada para traduzir o padrão de excelência da Allumi Clinic. Com arquitetura contemporânea, iluminação suave e design minimalista, o ambiente transmite elegância, exclusividade e acolhimento desde o primeiro momento. Aqui, a experiência começa antes mesmo do atendimento.",
+        caption: "Arquitetura contemporânea, iluminação suave e design minimalista transmitem elegância e acolhimento desde o primeiro momento.",
       },
       {
         image: "/images/recepcao-3.jpg",
         title: "Recepção",
-        caption: "Nossa recepção foi projetada para traduzir o padrão de excelência da Allumi Clinic. Com arquitetura contemporânea, iluminação suave e design minimalista, o ambiente transmite elegância, exclusividade e acolhimento desde o primeiro momento. Aqui, a experiência começa antes mesmo do atendimento.",
+        caption: "Arquitetura contemporânea, iluminação suave e design minimalista transmitem elegância e acolhimento desde o primeiro momento.",
       },
     ],
     [],
@@ -279,9 +279,9 @@ function GallerySlider() {
             </div>
           )}
 
-          {/* Overlays - segundo layer */}
-          <div className="absolute inset-0 z-[2] lux-grid opacity-[0.35]" />
-          <div className="absolute inset-0 z-[2] bg-gradient-to-b from-black/0 via-black/40 to-black/80" />
+          {/* Overlays - segundo layer (reduzidos para mostrar mais a imagem) */}
+          <div className="absolute inset-0 z-[2] lux-grid opacity-[0.1]" />
+          <div className="absolute inset-0 z-[2] bg-gradient-to-b from-black/0 via-black/10 to-black/50" />
           <div className="absolute inset-0 z-[2] lux-noise" />
 
           {/* Conteúdo - terceiro layer */}

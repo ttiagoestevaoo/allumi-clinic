@@ -91,10 +91,10 @@ export const metadata: Metadata = {
       "Allumi Clinic em Suzano-SP: clínica de estética avançada com harmonização facial, botox, preenchimentos, laser, tricologia e tratamentos corporais. Tecnologia de ponta e resultados naturais.",
     images: [
       {
-        url: "/opengraph.jpg",
+        url: "/images/espaco-dra-carol-1.jpg",
         width: 1200,
         height: 630,
-        alt: "Allumi Clinic — Clínica de Estética em Suzano-SP",
+        alt: "Allumi Clinic — Espaço da Dra. Carol em Suzano-SP",
         type: "image/jpeg",
       },
     ],
@@ -104,7 +104,7 @@ export const metadata: Metadata = {
     title: "Allumi Clinic — Sua melhor versão",
     description:
       "Allumi Clinic em Suzano-SP: harmonização facial, botox, preenchimentos, laser, tricologia e tratamentos corporais. Tecnologia avançada e resultados naturais.",
-    images: ["/opengraph.jpg"],
+    images: ["/images/espaco-dra-carol-1.jpg"],
   },
   robots: {
     index: true,
