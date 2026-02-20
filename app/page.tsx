@@ -268,7 +268,7 @@ function GallerySlider() {
               loading={index === 0 ? "eager" : "lazy"}
             />
           ) : null}
-          
+
           {/* Fallback quando imagem não existe ou erro */}
           {(!slides[index]?.image || imageErrors.has(index)) && (
             <div className="absolute inset-0 z-[1] bg-gradient-to-br from-primary/20 via-primary/10 to-background flex items-center justify-center">
@@ -518,8 +518,8 @@ export default function Home() {
   const categories: ServiceCategory[] = useMemo(
     () => [
       {
-        id: "facial",
-        label: "Facial",
+        id: "estetica",
+        label: "Estética",
         icon: <Wand2 className="size-4" strokeWidth={2.2} />,
         image: "/images/service-facial.jpg",
         items: [
@@ -533,6 +533,14 @@ export default function Home() {
           { title: "Limpeza de Pele", desc: "Pele limpa, glow real e toque macio." },
           { title: "Peeling Coreano (Lhalla Peel)", desc: "Renovação suave com luminosidade." },
           { title: "Peeling Ultrassônico", desc: "Tecnologia para limpeza profunda e delicada." },
+          { title: "Revitalização Facial", desc: "Renovação e viço para sua pele." },
+          { title: "Peeling Químico", desc: "Renovação celular com resultados visíveis." },
+          { title: "Skin Care Facial", desc: "Cuidado completo e personalizado para sua pele." },
+          { title: "Drenagem Linfática", desc: "Leveza e bem-estar com técnica especializada." },
+          { title: "Massagem Modeladora", desc: "Definição com cuidado e conforto." },
+          { title: "Massagem Relaxante", desc: "Pausa necessária para corpo e mente." },
+          { title: "Tratamento para Celulite", desc: "Redução e melhora da textura da pele." },
+          { title: "Redução de Medidas", desc: "Protocolos direcionados para resultados efetivos." },
         ],
       },
       {
@@ -587,7 +595,7 @@ export default function Home() {
     [],
   );
 
-  const [cat, setCat] = useState(categories[0]?.id ?? "facial");
+  const [cat, setCat] = useState(categories[0]?.id ?? "estetica");
   const active = categories.find((c) => c.id === cat) ?? categories[0]!;
 
   const navItems = useMemo(
