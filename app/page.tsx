@@ -28,6 +28,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Separator } from "@/components/ui/separator";
+import { MadeByTharuk } from "@/components/made-by-tharuk";
 
 function cx(...classes: Array<string | false | null | undefined>) {
   return classes.filter(Boolean).join(" ");
@@ -1341,10 +1342,11 @@ export default function Home() {
               </div>
 
               <Separator className="my-8" />
-              <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between text-xs text-muted-foreground">
+              {/* Faixa final: mesmo ritmo vertical do footer (gap-8 acima); conteúdo centralizado */}
+              <div className="flex flex-col items-center gap-4 text-center text-xs text-muted-foreground">
                 <div data-testid="text-footer-rights">© {new Date().getFullYear()} Allumi Clinic. Todos os direitos reservados.</div>
-                <div className="inline-flex items-center gap-2" data-testid="text-footer-seo">
-                  <MapPin className="size-3" /> clínica de estética Suzano
+                <div className="flex w-full justify-center" data-testid="text-footer-seo">
+                  <MadeByTharuk />
                 </div>
               </div>
             </div>
